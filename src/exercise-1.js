@@ -37,17 +37,13 @@ const human = {
     }
 };
 
-
-// @todo - make sure engineers & managers delegate to the 'human' object
-// @tip - you can move around the variable declarations 
-const engineer = Object.create(human);
-
-
-// @todo create an engineer, it delegates to human
+// @todo change the engineer, it delegates to human
 // @todo it should have a code() method
+const engineer = {};
 
 // @todo create a manager, it delegates to human
 // @todo it should have a manage(humanInstance) method
+
 
 // create instances of each...
 const ryan = Object.create(engineer);
