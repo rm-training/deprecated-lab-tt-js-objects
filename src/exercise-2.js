@@ -49,3 +49,18 @@ class Calculator {
 
 // we're doing CommonJS modules here for simplicity with Node
 module.exports = Calculator;
+
+
+/**
+ * There be code cheats below! Use them to speed up the pace if you like.
+ */
+
+// add() will sum all the numbers, you can use reduce like so:
+// this.value += this.stack.reduce((total, current) => {
+//   return total + current;
+// }, 0);
+
+// mul() will multiply the stack, you can use reduce like so:
+// this.value *= this.stack.reduce((total, current) => {
+//   return total + current;
+// }, 0);
