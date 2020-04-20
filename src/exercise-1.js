@@ -44,7 +44,6 @@ const engineer = {};
 // @todo create a manager, it delegates to human
 // @todo it should have a manage(humanInstance) method
 
-
 // create instances of each...
 const ryan = Object.create(engineer);
 const tim = Object.create(manager);
@@ -58,19 +57,29 @@ tim.manage(ryan);
 
 /**
  * Bonus!
- * 
+ *
  * We want to augment a human so they can actually behave more like a robot...
- * 
+ *
  * Make a new function:
  *   robotish(human)
- * 
+ *
  * This function will accept any object (really) and augment it, making it behave more like a robot.
- * 
+ *
  * It does this by adding on or merging in "robot" behaviors, which should include:
  *  dance() // logs out "{name} is dancing like a robot"
- * 
+ *
  * You can do this by setting properties on the human object directly, or using Object.assign() to merge
  */
- function robotish(human) {
+function robotish(human) {}
 
- }
+// @todo - uncomment me to test
+// @test - this should log out "Tim is dancing like a robot"
+robotish(tim);
+try {
+    tim.dance();
+} catch (e) {
+    console.log('Bonus not yet implemented');
+}
+
+// @test - this should fail...
+//ryan.dance();
