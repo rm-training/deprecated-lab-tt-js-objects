@@ -1,5 +1,5 @@
 describe("Constructor Functions Exercise", function () {
-  const Calculator = require("../src/exercise-1.js");
+  const Calculator = require("../src/exercise-2-solved.js");
 
   it("Should provide a Calculator function", function () {
     expect(typeof Calculator).toBe("function");

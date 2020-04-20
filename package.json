@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "exercise-1": "node src/exercise-1.js",
+    "exercise-2": "jasmine spec/exercise-2.spec.js"
   },
   "author": "Ryan Morris",
   "license": "ISC",
