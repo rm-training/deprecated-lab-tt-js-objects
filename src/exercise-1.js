@@ -40,8 +40,10 @@ const tim = Object.create(manager);
 
 // @todo set their own "name" properties!
 
-ryan.code(); // this should log out "Ryan is coding"
-tim.manage(ryan); // this should log out "Tim says: Code faster, Ryan!"
+// @test - manually verify: this should log out "Ryan is coding"
+ryan.code(); 
+// @test - manually verify: this should log out "Tim says: Code faster, Ryan!"
+tim.manage(ryan); 
 
 /**
  * Bonus!
