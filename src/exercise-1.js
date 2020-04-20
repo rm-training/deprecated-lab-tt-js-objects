@@ -9,32 +9,47 @@
  * humans have a "name" property unique to each of them
  * and they can all walk() and talk(words)
  * 
- * walk() just logs out: "{name} is walking", where name is the human's name
- * talk(words) just logs out: "{name} says: {words}"
- *
- * manager and engineers will delegate to Humans
+ *  walk() just logs out: "{name} is walking", where name is the human's name
+ *  talk(words) just logs out: "{name} says: {words}"
  *
  * managers can manage(engineer)
- * This function will just log:
- * "{manager} says: Code faster, {engineer}!" 
- * where manager is the manager's name
- * and engineer is the engineer's name
+ *  This function will just log:
+ *  "{manager} says: Code faster, {engineer}!" 
+ *  where manager is the manager's name
+ *  and engineer is the engineer's name
+ * This _should_ ultimately use the delegated human's talk() method...
  *
  * engineers can code()
- * This just logs out "{name} is coding", where name is the engineer's name
+ *  This just logs out "{name} is coding", where name is the engineer's name
  *
+ * Important: manager and engineers will delegate to humans
+ * This way a manager can both "manage()" and "walk()" and "talk()"
+ * 
  * Make this code work with your three object chums:
  */
 
-// @todo add the walk() and talk(words) functions
-const human = {};
+const human = {
+    walk() {
+        console.log(`${this.name} is walking`);
+    },
+    talk(words) {
+        console.log(`${this.name} says: ${words}`);
+    }
+};
 
-// @todo add the code() method
-const engineer = {};
 
-// @todo add the manage(human) method
-const manager = {}
+// @todo - make sure engineers & managers delegate to the 'human' object
+// @tip - you can move around the variable declarations 
+const engineer = Object.create(human);
 
+
+// @todo create an engineer, it delegates to human
+// @todo it should have a code() method
+
+// @todo create a manager, it delegates to human
+// @todo it should have a manage(humanInstance) method
+
+// create instances of each...
 const ryan = Object.create(engineer);
 const tim = Object.create(manager);
 
