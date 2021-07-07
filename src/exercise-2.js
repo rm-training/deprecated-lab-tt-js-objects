@@ -36,7 +36,7 @@
  *   c.get();     // returns 20
  *
  * Either test by executing this code directly
- *  node /src/exercise-1.js
+ *  node /src/exercise-2.js
  *
  * And make sure it passes all tests:
  *  npm test
