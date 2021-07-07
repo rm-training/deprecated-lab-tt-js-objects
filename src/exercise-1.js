@@ -37,21 +37,31 @@ const human = {
     }
 };
 
-// @todo change the engineer, it delegates to human
+// @todo implement the engineer object - it delegates to human
 // @todo it should have a code() method
+// code() should log "{name} is coding"
 const engineer = {};
 
-// @todo create a manager, it delegates to human
+// @todo create a manager object, it delegates to human
 // @todo it should have a manage(humanInstance) method
+// manage() should log "{manager} says: Code faster, {engineer}!" 
 
 // create instances of each...
 const ryan = Object.create(engineer);
-const tim = Object.create(manager);
+// @todo - create an instance of `manager` referenced by the var `tim` 
+let tim;
 
-// @todo set their own "name" properties!
+// @todo for both `ryan` and `tim`, set their own "name" properties!
 
 // @test - manually verify: this should log out "Ryan is coding"
-ryan.code(); 
+ryan.code();
+
+// 
+// Move or remove this "return" statement to continue 
+// implementing and manually testing below this point
+return;
+
+
 // @test - manually verify: this should log out "Tim says: Code faster, Ryan!"
 tim.manage(ryan); 
 
@@ -72,14 +82,10 @@ tim.manage(ryan);
  */
 function robotish(human) {}
 
-// @todo - uncomment me to test
 // @test - this should log out "Tim is dancing like a robot"
-robotish(tim);
 try {
+    robotish(tim);
     tim.dance();
 } catch (e) {
     console.log('Bonus not yet implemented');
 }
-
-// @test - this should fail...
-//ryan.dance();
